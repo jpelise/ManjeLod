@@ -28,6 +28,18 @@ class MyScreenManager(ScreenManager):
 class HomeScreen(Screen):
     pass
 
+class SettingScreen(Screen):
+    pass
+
+class ActivityScreen(Screen):
+    pass
+
+class StatScreen(Screen):
+    pass
+
+class TimelineScreen(Screen):
+    pass
+
 # endregion
 # region BUILDING APP...............................................................................
 
@@ -39,13 +51,13 @@ class TimeTracker(App):
         # adding all the screens to the screen manager
         sm.add_widget(HomeScreen(name='menu')) # screen menu = children 0
         sm.add_widget(SettingScreen(name='settings')) # children 1
-        sm.add_widget((name = 'set activity')) # children 2
+        sm.add_widget(ActivityScreen(name = 'set activity')) # children 2
         sm.add_widget(StatScreen(name = 'stats')) # children 3
         sm.add_widget(TimelineScreen(name = 'timeline')) # children 4
 
         # adding widgets to the screens
         # Menu Screen:
-        sm.children[0].add_widget(MyRoot()) # we set the MyRoot Boxlayout inside the "Menu" screen (we should rename Myroot)
+        # sm.children[0].add_widget(MyRoot()) # we set the MyRoot Boxlayout inside the "Menu" screen (we should rename Myroot)
 
         return sm
 
